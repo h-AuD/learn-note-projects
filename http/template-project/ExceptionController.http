@@ -1,0 +1,23 @@
+### 验证全局异常处理器,测试参数route=1、2或者没有时的场景
+POST {{baseUrl}}/error_internal/global_exception?route=1
+Content-Type: application/json
+signature:{{signature}}
+
+
+### 验证全局异常处理器,其中抛出的异常被try..catch..
+POST {{baseUrl}}/error_internal/global_exception_catch
+Content-Type: application/json
+signature:{{signature}}
+
+
+### 验证 执行的SQL的table不存在时,抛出的异常
+GET {{baseUrl}}/error_internal/error_sql_001
+signature:{{signature}}
+
+### 验证 执行的SQL的table field不存在时,抛出的异常
+GET {{baseUrl}}/error_internal/error_sql_002
+signature:{{signature}}
+
+### 验证 执行的SQL的违反DDL table field时,抛出的异常
+GET {{baseUrl}}/error_internal/error_sql_003?name=xxxxx
+signature:{{signature}}

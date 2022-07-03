@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>AuD.learn-note.project</groupId>
+        <artifactId>template-project-by-split</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>http-api</artifactId>
+
+    <dependencies>
+
+        <!-- webmvc启动器依赖(基于servlet) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- springboot_2.2.2中Web包含下列依赖,但是从2.4.0开始Web就不包含下列依赖 -->
+        <!-- 参数校验器,通常用于验证controller中的参数,eg."@Valid",请参考case:"AuD.template.project.controller.springmvc.ParameterValidController" -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>AuD.learn-note.project</groupId>
+            <artifactId>project-service</artifactId>
+            <version>${project.baisc.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

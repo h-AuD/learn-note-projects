@@ -1,0 +1,9 @@
+{
+  "xxx_template": {
+    "jobExecuteTrigger": "15:30:00",
+    "content": {
+      "#KEY1#": "",
+      "#KEY12#": ""
+    }
+  }
+}

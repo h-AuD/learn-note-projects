@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<!-- mybatis generator config,mybatis 逆向工程配置,官方文档:http://mybatis.org/generator/index.html -->
+<generatorConfiguration>
+    <!-- context 元素用于指定生成一组对象的环境。 targetRuntime：MyBatis3Simple 只生成提供简单增删改查的代码 -->
+    <context id="testTables" targetRuntime="MyBatis3Simple">
+
+        <!-- 设置java file 编码 UTF-8 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="false" />
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+
+
+        <!-- 数据库链接的信息：驱动类、链接地址、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test"
+                        userId="root"
+                        password="286393118">
+        </jdbcConnection>
+
+        <!-- 默认 false，把 JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true 时把 JDBC DECIMAL 和 NUMERIC 类型解析为 java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+
+        <!-- targetPackage：指定 POJO 类生成后所在的包的位置 targetProject:指定生成 POJO 类的位置 -->
+        <javaModelGenerator targetPackage="com.AuD.entity" targetProject=".\src\main\java">
+            <!-- enableSubPackages:是否让 schema 做为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+            <!-- 从数据库返回的值被清理先后的空格 -->
+            <property name="trimStrings" value="false" />
+        </javaModelGenerator>
+
+        <!-- targetPackage：指定生成的 SQL 映射文件所在的位置 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject=".\src\main\resources/">
+            <!-- enableSubPackages:是否让 schema 做为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+
+        <!-- targetPackage：指定 mapper 接口生成包的位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.AuD.mapper" targetProject=".\src\main\java">
+            <!-- enableSubPackages:是否让 schema 做为包的后缀 -->
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+
+        <!-- 指定数据库表 tableName：指定表名 domainObjectName：指定生成的 POJO 的类名,默认使用表名做为ClassName(自动转换驼峰命名) -->
+        <table tableName="system_user_basic_info"/>
+        <!-- <table tableName="system_user_basic_info" domainObjectName="UserBasicInfo"/> -->
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AuD.template.project.mapper.UserBasicInfoMapper">
+
+    <resultMap id="baseResultMap" type="AuD.template.project.model.UserBasicInfo">
+        <id column="UID" property="uid"/>
+        <result column="NAME" property="name"/>
+        <result column="PASSWORD" property="password"/>
+        <result column="CTIME" property="ctime"/>
+    </resultMap>
+
+
+    <select id="getAllInfo" resultMap="baseResultMap">
+        SELECT * from user_basic_info
+    </select>
+
+
+</mapper>

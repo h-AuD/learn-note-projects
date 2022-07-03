@@ -1,0 +1,14 @@
+###
+POST {{baseUrl}}/xxx
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+}
+
+###
+POST {{baseUrl}}/xx
+Content-Type: application/json
+Authorization: {{token}}
+
+
