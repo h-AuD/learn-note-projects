@@ -95,7 +95,7 @@
         </dependency>
 
         <dependency>
-            <groupId>AuD.common</groupId>
+            <groupId>AuD.common.function</groupId>
             <artifactId>common-function</artifactId>
             <version>${commons.function.version}</version>
         </dependency>

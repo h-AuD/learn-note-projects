@@ -24,7 +24,7 @@
 
 
         <dependency>
-            <groupId>AuD.common</groupId>
+            <groupId>AuD.common.function</groupId>
             <artifactId>common-function</artifactId>
         </dependency>
 
