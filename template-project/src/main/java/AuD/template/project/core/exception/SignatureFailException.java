@@ -1,6 +1,8 @@
 package AuD.template.project.core.exception;
 
-import AuD.component.common.web.AbstractServerException;
+
+
+import AuD.common.function.web.AbstractServerException;
 
 import static AuD.template.project.core.constant.StatusCode.SIGNATURE_FAIL;
 
@@ -12,7 +14,7 @@ import static AuD.template.project.core.constant.StatusCode.SIGNATURE_FAIL;
  * @date 2021/4/27 16:45
  * @Version 1.0
  */
-public class SignatureFailException extends AbstractServerException{
+public class SignatureFailException extends AbstractServerException {
 
     /**
      * 常量(签名失败).

@@ -1,8 +1,9 @@
 package AuD.template.project.core.conf;
 
-import AuD.component.common.web.AbstractServerException;
-import AuD.component.common.web.ControllerResultInfo;
-import AuD.component.common.web.ControllerResultInfoBuilder;
+
+import AuD.common.function.web.AbstractServerException;
+import AuD.common.function.web.ControllerResultInfo;
+import AuD.common.function.web.ControllerResultInfoBuilder;
 import AuD.template.project.controller.springmvc.ParameterValidController;
 import AuD.template.project.core.exception.ParameterException;
 import AuD.template.project.core.exception.SignatureFailException;

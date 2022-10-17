@@ -1,6 +1,7 @@
 package AuD.template.project.core.exception;
 
-import AuD.component.common.web.AbstractServerException;
+
+import AuD.common.function.web.AbstractServerException;
 import AuD.template.project.core.constant.StatusCode;
 
 import static AuD.template.project.core.constant.StatusCode.PARAMETER_ERROR;
